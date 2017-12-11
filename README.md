@@ -93,16 +93,21 @@ A Boolean value to indicate whether we found any solution
 # IV) EXAMPLES
 More details can be found in example1.py
 
->>>import networkx as nx  
+>>>import networkx as nx
+
 >>>import BooleanDOI_processing as BDOIp
+
 >>>import BooleanDOI_TargetControl as BDOItc
 
 Here we construct a Boolean network model from a written Boolean rules in the Booleannet format. 
 The rules are store in the text file "example1.txt"
 
 >>>f = open("example1.txt",r)
->>>lines = f.readlines()  
+
+>>>lines = f.readlines()
+
 >>>f.close()
+
 >>>Gread, readnodes = BDOIp.form_network(lines, sorted_nodename = False)
 
 Then one can obtain the expanded network by calling function Get_expanded_network
@@ -110,7 +115,9 @@ Then one can obtain the expanded network by calling function Get_expanded_networ
 
 Then one can solve a target control problem as followed. First one need to initialize the three dictionary called TDOI_BFS, flagged and potential as a global variable. Then one can call the update_single_DOI to calculate the LDOI for each single node. Then one can call the GRASP_target_control algorithm to solve the target control algorithm.
 >>>TDOI_BFS, flagged, potential = {}, {}, {}
->>>BDOItc.update_single_DOI(G_expanded, network_name='example1', TDOI_BFS, flagged, potential)  
+
+>>>BDOItc.update_single_DOI(G_expanded, network_name='example1', TDOI_BFS, flagged, potential)
+
 >>>solutions, solution_found = BDOItc.GRASP_target_control(G_expanded, Target = set(['n2n']), max_itr = 500, TDOI_BFS, flagged, potential, custom_score_index = '3')
 
 >>>print solutions
