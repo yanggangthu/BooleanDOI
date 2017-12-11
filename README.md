@@ -7,7 +7,7 @@ This algorithm is based on a concept named logic domain of influence and a rando
 
 The code is written in Python 2.7. The module requires NetworkX 1.11.
 
-Correspondence can be directed to yanggangthu@gmail.com.
+Correspondence can be directed to yanggangthu@gmail.com. Please cite the corresponding paper when the code is used or adapted.
 
 [1] PARDALOS, P. M., T. QIAN, and M. G. RESENDE (1998) “A Greedy Randomized Adaptive Search Procedure for the Feedback Vertex Set Problem,” Journal of Combinatorial Optimization, 2(4), pp. 399–412.
 
