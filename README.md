@@ -3,11 +3,13 @@
 # I)	THE METHOD
 This repository contains functions using GRASP algorithm to solve the target control problem in Boolean network model, proposed in a paper titled "Target Control in Logical Models Using the Domain of Influence of Nodes" submitted to the special issue ''Logical Modeling of Cellular Processes'' of Frontiers in Physiology.
 
-This algorithm is based on a concept named logic domain of influence and a random heuristic algorithm called greedy randomized adaptive search procedure (GRASP). More details can be found in the paper.
+This algorithm is based on a concept named logic domain of influence and a random heuristic algorithm called greedy randomized adaptive search procedure (GRASP). More details can be found in the paper [1] and [2].
 
 The code is written in Python 2.7. The module requires NetworkX 1.11.
 
-
+Correspondence can be directed to yanggangthu@gmail.com.
+[1] PARDALOS, P. M., T. QIAN, and M. G. RESENDE (1998) “A Greedy Randomized Adaptive Search Procedure for the Feedback Vertex Set Problem,” Journal of Combinatorial Optimization, 2(4), pp. 399–412.
+[2] FESTA, P., P. M. PARDALOS, and M. G. C. RESENDE (2001) “Algorithm 815: FORTRAN Subroutines for Computing Approximate Solutions of Feedback Set Problems Using GRASP,” ACM Trans. Math. Softw., 27(4), pp. 456–464
 
 # II) STRUCTURE OF MODULE
 Related functions are stored in BooleanDOI_processing.py, BooleanDOI_DOI.py, BooleanDOI_TargetControl.py and qm.py.
