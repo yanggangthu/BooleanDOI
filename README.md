@@ -149,7 +149,9 @@ Then one can solve a target control problem as followed. First one need to initi
 
 A sample output looks like 
 >>>defaultdict(<type 'int'>, {(('~n5n',), True): 195, (('n4n',), False): 301, (('n3n', 'n5n'), False): 4})
-It means that ['~n5n'], ['n4n'], ['n3n','n5n'] are the solutions found, they are incompatible, compatible and compatible solution respectively, and they have been found 195, 301 and 4 times during the 500 iterations.
+
+
+It means that ['~n5n'], ['n4n'], ['n3n','n5n'] are the solutions found, they are incompatible, compatible and compatible solution respectively, and they have been found 195, 301 and 4 times respectively during the 500 iterations.
 
 # V)	COPYRIGHT
 
