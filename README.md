@@ -39,21 +39,29 @@ The function can take 6 paramters listed below and only the first (the graph) is
 Parameters
 ----------
 G         : the given expanded network as an DiGraph
+
 source    : the list of node states that we are interested in to find LDOI
-              source node can either be a single node or a list of nodes,
-              DO NOT INCLUDE A NODE AND ITS NEGATION FOR SOURCE
+
+            source node can either be a single node or a list of nodes,
+            
+            DO NOT INCLUDE A NODE AND ITS NEGATION FOR SOURCE
 
 Default Parameter Values  
 -----------------------
 composite_node_delimiter='_' : as name suggested, used to parse a composite node
+
                                e.g. a composite node 'A_B' means A AND B for the default value
+                               
 Negation_func= : the function to calculate the complementary node of a given node on the expanded network
 
 Returns
 -------
 LDOI in the format of a set,
+
 complementary list for the visited part of the search
+
 a list containing any found conflict name to the source during the search process
+
 a list containing all the composte nodes that is not included in the LDOI
 
 # (b) Target Control
@@ -64,34 +72,53 @@ For the GRASP_target_control function, the following parameters are needed
 Parameters
 ----------
 G_expanded: the input expanded_graph as a DiGraph object
+
 Target : the target set
+
 max_itr : the number of iterations that are repeated to find the solution
+
 TDOI_BFS : a dictionary to store the LDOI of each node state set
+
 flagged : a dictionary to store whether the LDOI of each node state set contains the negation of any target node
+
 potential : a dictionary to store the composite nodes visited but not included during the search process for LDOI for each node state set
 
 Default Parameter Values  
 -----------------------
 candidates_score_index : the chosen heuristic greedy function,
+
                          '0' represents the size of LDOI, 
+                         
                          '1' represents the size of composite nodes attached to the LDOI
+                         
                          '2' represents the linear combination of the two above with the equal weight
+                         
                          '3' represents the size of LDOI with penalization, penalized by multiplied with -1 for those containing                                      negation of any target
+                         
                          '4' represents the size of LDOI with penalization, penalized by being subtracted by maximum LDOI for those                                  containing negation of any target
+                         
 forbidden_nodes : the nodes that are forbiden to be used, both the positive states and the negative states will be forbidden
+
 avail_nodes : the nodes that are available to be used, both the positive states and the negative states will be available
+
 forbidden_node_states : the node states that are forbiden to be used
   
 notice different meaning for the default value for forbidden_nodes and avail_nodes
+
 when forbidden_nodes is empty, we do not forbid any node
+
 when avail_nodes is empyty, we allow all nodes
 
 Returns
 -------
 solutions: a dictionay maps a tuple to a integer value
-  the first element of the tuple is the solution as a sorted tuple
-  the second element of the tuple is a Boolean value to indicate whether the LDOI of the solution is incompatible or not. True means    incompatible.
-  The integer number is the frequency this solution is obtained during the max_itr iterations.
+
+           the first element of the tuple is the solution as a sorted tuple
+  
+           the second element of the tuple is a Boolean value to indicate whether the LDOI of the solution is incompatible or not. True  means incompatible.
+           
+           The integer number is the frequency this solution is obtained during the max_itr iterations.
+           
 A Boolean value to indicate whether we found any solution
 
 # IV) EXAMPLES
