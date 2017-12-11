@@ -112,9 +112,8 @@ Then one can solve a target control problem as followed. First one need to initi
 >>>TDOI_BFS, flagged, potential = {}, {}, {}
 >>>BDOItc.update_single_DOI(G_expanded, network_name='example1', TDOI_BFS, flagged, potential)  
 >>>solutions, solution_found = BDOItc.GRASP_target_control(G_expanded, Target = set(['n2n']), max_itr = 500, TDOI_BFS, flagged, potential, custom_score_index = '3')
+
 >>>print solutions
-
-
 
 
 # V)	COPYRIGHT
