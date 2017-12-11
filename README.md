@@ -8,7 +8,9 @@ This algorithm is based on a concept named logic domain of influence and a rando
 The code is written in Python 2.7. The module requires NetworkX 1.11.
 
 Correspondence can be directed to yanggangthu@gmail.com.
+
 [1] PARDALOS, P. M., T. QIAN, and M. G. RESENDE (1998) “A Greedy Randomized Adaptive Search Procedure for the Feedback Vertex Set Problem,” Journal of Combinatorial Optimization, 2(4), pp. 399–412.
+
 [2] FESTA, P., P. M. PARDALOS, and M. G. C. RESENDE (2001) “Algorithm 815: FORTRAN Subroutines for Computing Approximate Solutions of Feedback Set Problems Using GRASP,” ACM Trans. Math. Softw., 27(4), pp. 456–464
 
 # II) STRUCTURE OF MODULE
