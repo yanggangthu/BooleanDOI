@@ -48,9 +48,7 @@ source    : the list of node states that we are interested in to find LDOI
 
 Default Parameter Values  
 -----------------------
-composite_node_delimiter='_' : as name suggested, used to parse a composite node
-
-                               e.g. a composite node 'A_B' means A AND B for the default value
+composite_node_delimiter='_' : as name suggested, used to parse a composite node, e.g. a composite node 'A_B' means A AND B for the default value
                                
 Negation_func= : the function to calculate the complementary node of a given node on the expanded network
 
@@ -103,11 +101,7 @@ avail_nodes : the nodes that are available to be used, both the positive states 
 
 forbidden_node_states : the node states that are forbiden to be used
   
-notice different meaning for the default value for forbidden_nodes and avail_nodes
-
-when forbidden_nodes is empty, we do not forbid any node
-
-when avail_nodes is empyty, we allow all nodes
+notice different meaning for the default value for forbidden_nodes and avail_nodes: when forbidden_nodes is empty, we do not forbid any node, when avail_nodes is empyty, we allow all nodes
 
 Returns
 -------
