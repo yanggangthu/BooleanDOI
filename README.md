@@ -1,7 +1,7 @@
 # README BooleanDOI
 
 # I)	THE METHOD
-This repository contains functions using GRASP algorithm to solve the target control problem in Boolean network model, proposed in a paper titled "Target Control in Logical Models Using the Domain of Influence of Nodes" submitted to the special issue ''Logical Modeling of Cellular Processes'' of Frontiers in Physiology.
+This repository contains functions using GRASP algorithm to solve the target control problem in Boolean network model, proposed in a paper titled "Target Control in Logical Models Using the Domain of Influence of Nodes" submitted to the special issue ''Logical Modeling of Cellular Processes'' of Frontiers in Physiology. A preprint version is available at BioRxiv: https://www.biorxiv.org/content/early/2018/01/04/243246 .
 
 This algorithm is based on a concept named logic domain of influence and a random heuristic algorithm called greedy randomized adaptive search procedure (GRASP). More details can be found in the paper [1] and [2].
 
