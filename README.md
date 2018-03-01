@@ -154,7 +154,7 @@ A sample output looks like
 >>>defaultdict(<type 'int'>, {(('~n5n',), True): 195, (('n4n',), False): 301, (('n3n', 'n5n'), False): 4})
 
 
-It means that ['~n5n'], ['n4n'], ['n3n','n5n'] are the solutions found. The first is incompatible (it has internal conflicts, so it is expected to be harder to implement in practice) and was found 195 times during the 500 iterations, the second is compatible (conflict-free) and was found 301 times, and the third is compatible and was found 4 times during the 500 iterations.
+Thus ['~n5n'] (i.e., meaning the OFF state of node 5), ['n4n'] (i.e., the ON state of node 4), ['n3n','n5n'] (i.e., the ON state of node 3 coupled with the ON state of node 5) can yield the ON state of node 2 (the target). The first is incompatible (it has internal conflicts, so it is expected to be harder to implement in practice) and was found 195 times during the 500 iterations, the second is compatible (conflict-free) and was found 301 times, and the third is compatible and was found 4 times during the 500 iterations.
 
 # V)	COPYRIGHT
 
