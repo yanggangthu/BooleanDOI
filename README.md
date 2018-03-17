@@ -116,6 +116,7 @@ solutions: a dictionay maps a tuple to a integer value
 A Boolean value to indicate whether we found any solution
 
 # IV) EXAMPLES
+# (a) A simple network
 More details can be found in example1.py
 
 >>>import networkx as nx
@@ -151,8 +152,22 @@ A sample output looks like
 >>>defaultdict(<type 'int'>, {(('~n5n',), True): 195, (('n4n',), False): 301, (('n3n', 'n5n'), False): 4})
 
 
-It means that ['~n5n'], ['n4n'], ['n3n','n5n'] are the solutions found, they are incompatible, compatible and compatible solution respectively, and they have been found 195, 301 and 4 times respectively during the 500 iterations. More specifically, ['~n5n'] (i.e., meaning the OFF state of node 5), ['n4n'] (i.e., the ON state of node 4), ['n3n','n5n'] (i.e., the ON state of node 3 coupled with the ON state of node 5) can yield the ON state of node 2 (the target). The first is incompatible (it has internal conflicts, so it is expected to be harder to implement in practice) and was found 195 times during the 500 iterations, the second is compatible (conflict-free) and was found 301 times, and the third is compatible and was found 4 times during the 500 iterations.
+It means that ['~n5n'], ['n4n'], ['n3n','n5n'] are the solutions found, they are incompatible, compatible and compatible solution respectively, and they have been found 195, 301 and 4 times respectively during the 500 iterations. More specifically, ['~n5n'] (i.e., meaning the OFF state of node 5), ['n4n'] (i.e., the ON state of node 4), ['n3n','n5n'] (i.e., the ON state of node 3 coupled with the ON state of node 5) can yield the ON state of node 2 (the target). The first is incompatible (it has internal conflicts, so it is expected to be harder to implement in practice) and was found 195 times during the 500 iterations, the second is compatible (conflict-free) and was found 301 times, and the third is compatible and was found 4 times during the 500 iterations. After running the python script, three files are created, starting with the network name and ended with _flagged, _potential, _TDOI. These three files store the corresponding parameters “flagged”, “potential” and “TDOI_BFS” respectively as mentioned above.
 
+# (b) EMT network 
+We also provide the Booleannet file of the EMT network (EMT.txt) and python demo file (EMTNetwork_TargetControl.py) using the target control algorithm. As there are source nodes with constant node states, we need to do a network reduction to iteratively remove all the nodes with constant states and thus the python file is a little bit longer than the first one. However the essential steps (line 142, 145 and 148) are the same as the simple example above.
+
+Here we also implement several options for this EMTNetwork_TargetControl.py by supplying three external parameters.
+These three index represents the target, the forbidden node (state) list and the customer score index. One can look into the python files to see exactly what these parameters corresponds.
+For example, one can run the python file using the command 
+python EMTNetwork_TargetControl.py 1 0 3
+Here the 1 refers to the target set as ~EMT, 0 means no restriction and 3 means the fourth custom score.
+We also set the default parameter for this script. That is running command
+python EMTNetwork_TargetControl.py 
+is equivalent to 
+python EMTNetwork_TargetControl.py 1 0 0
+
+The output format of this scipt is similar to the above and the script will generate additional files. Besides those three files mentioned above, we also have two additional files, EMTreduced_Reduced_Rules.txt and EMTreduced_node_mapping.txt. The first files stored the reduced Boolean rules with node name coded in the second file.
 # V)	COPYRIGHT
 
 
