@@ -1,6 +1,5 @@
 import networkx as nx
 import BooleanDOI_processing as BDOIp
-import BooleanDOI_DOI as BDOI
 import BooleanDOI_TargetControl as BDOItc
 
 #input files
@@ -22,7 +21,7 @@ f.close()
 Gread,readnodes = BDOIp.form_network(lines, sorted_nodename = False)
 
 #form expanded network
-G_expanded=BDOIp.Get_expanded_network(Gread, prefix=prefix, suffix=suffix)
+G_expanded = BDOIp.Get_expanded_network(Gread, prefix=prefix, suffix=suffix)
 
 #parameters for target control
 max_itr = 500

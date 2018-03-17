@@ -407,6 +407,7 @@ def GRASP_target_control(G_expanded, Target, max_itr, TDOI_BFS, flagged, potenti
   forbidden_nodes : the nodes that are forbiden to be used, both the positive states and the negative states will be forbidden
   avail_nodes : the nodes that are available to be used, both the positive states and the negative states will be available
   forbidden_node_states : the node states that are forbiden to be used
+  single_solution_preferred : A boolean value to indicate whether we only found single compatible solutions.
 
   notice different meaning for the default value for forbidden_nodes and avail_nodes
   when forbidden_nodes is empty, we do not forbid any node
