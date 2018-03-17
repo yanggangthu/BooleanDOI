@@ -160,14 +160,20 @@ We also provide the Booleannet file of the EMT network (EMT.txt) and python demo
 Here we also implement several options for this EMTNetwork_TargetControl.py by supplying three external parameters.
 These three index represents the target, the forbidden node (state) list and the customer score index. One can look into the python files to see exactly what these parameters corresponds.
 For example, one can run the python file using the command 
+
 python EMTNetwork_TargetControl.py 1 0 3
+
 Here the 1 refers to the target set as ~EMT, 0 means no restriction and 3 means the fourth custom score.
 We also set the default parameter for this script. That is running command
+
 python EMTNetwork_TargetControl.py 
+
 is equivalent to 
+
 python EMTNetwork_TargetControl.py 1 0 0
 
 The output format of this scipt is similar to the above and the script will generate additional files. Besides those three files mentioned above, we also have two additional files, EMTreduced_Reduced_Rules.txt and EMTreduced_node_mapping.txt. The first files stored the reduced Boolean rules with node name coded in the second file.
+
 # V)	COPYRIGHT
 
 
