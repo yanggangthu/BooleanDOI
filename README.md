@@ -113,7 +113,9 @@ solutions: a dictionay maps a tuple to a integer value
            
            The integer number is the frequency this solution is obtained during the max_itr iterations.
            
-A Boolean value to indicate whether we found any solution
+A Boolean value to indicate whether we found any solution.
+
+Notice the current program will only report single node solution if they exist and the program will only begin to search for multi-node solution if single node solution does not exist. To change this behavior to search for multi-node from the beginning, change the True to False in line 435 of BooleanDOI_TargetControl.py
 
 # IV) EXAMPLES
 # (a) A simple network
